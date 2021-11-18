@@ -15,7 +15,7 @@ The path to follow might change at some points.
 	- [x] Freeze Health
 	- [x] Freeze Ammo
 	- [x] Bunnyhop
-	- [ ] TriggerBot
+	- [X] TriggerBot
 	- [ ] Aimbot
 - [ ] Internal
 	- [x] Freeze Health
