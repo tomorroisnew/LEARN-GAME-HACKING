@@ -1,0 +1,4 @@
+﻿  dllmain.cpp
+D:\Programming\AmongUsTestDll\AmongUsTestDll\dllmain.cpp(134,23): warning C4018: '<': signed/unsigned mismatch
+D:\Programming\AmongUsTestDll\AmongUsTestDll\dllmain.cpp(127): warning C4715: 'PlayerColor': not all control paths return a value
+  AmongUsTestDll.vcxproj -> D:\Programming\AmongUsTestDll\Debug\AmongUsTestDll.dll
