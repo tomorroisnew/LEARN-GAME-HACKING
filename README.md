@@ -24,7 +24,7 @@ The path to follow might change at some points.
 	- [x] TriggerBot
 	- [ ] Aimbot
 	- [ ] AOB Scan
-- [ ] ReClass
+- [x] ReClass
 - [x] Calling internal functions internally
 - [x] Calling internal functions Externally
 - [ ] Hooks
