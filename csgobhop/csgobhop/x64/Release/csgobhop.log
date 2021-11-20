@@ -1,0 +1,12 @@
+﻿  csgobhop.cpp
+D:\Programming\csgobhop\csgobhop\csgobhop.cpp(30,59): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+D:\Programming\csgobhop\csgobhop\csgobhop.cpp(35,56): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+D:\Programming\csgobhop\csgobhop\csgobhop.cpp(77,43): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+D:\Programming\csgobhop\csgobhop\csgobhop.cpp(77,43): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+D:\Programming\csgobhop\csgobhop\csgobhop.cpp(86,82): warning C4312: 'type cast': conversion from 'unsigned long' to 'LPCVOID' of greater size
+  Generating code
+  1 of 88 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  csgobhop.vcxproj -> D:\Programming\csgobhop\x64\Release\csgobhop.exe
