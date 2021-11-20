@@ -25,8 +25,8 @@ The path to follow might change at some points.
 	- [ ] Aimbot
 	- [ ] AOB Scan
 - [ ] ReClass
-- [ ] Calling internal functions internally
-- [ ] Calling internal functions Externally
+- [x] Calling internal functions internally
+- [x] Calling internal functions Externally
 - [ ] Hooks
 	- [ ] Function Hooking
 	- [ ] Trampoline Hooking
