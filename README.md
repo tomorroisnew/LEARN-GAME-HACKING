@@ -29,7 +29,7 @@ The path to follow might change at some points.
 - [x] Calling internal functions Externally
 - [x] Creating an Injector
 - [ ] Hooks
-	- [ ] Function Hooking
+	- [x] Function Hooking
 	- [ ] Trampoline Hooking
 	- [ ] IAT Hooking
 	- [ ] VTable Hooking
