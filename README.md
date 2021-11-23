@@ -27,6 +27,7 @@ The path to follow might change at some points.
 - [x] ReClass
 - [x] Calling internal functions internally
 - [x] Calling internal functions Externally
+- [x] Creating an Injector
 - [ ] Hooks
 	- [ ] Function Hooking
 	- [ ] Trampoline Hooking
