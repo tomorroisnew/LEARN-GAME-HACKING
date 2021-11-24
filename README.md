@@ -34,7 +34,7 @@ The path to follow might change at some points.
 	- [ ] IAT Hooking
 	- [ ] VTable Hooking
 - [ ] DirectX
-	- [ ] Create Menu
+	- [x] Create Menu
 	- [ ] ESP Hacks
 - [ ] Reverse Engeneering
 	- [x] Assembly
