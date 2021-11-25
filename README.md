@@ -33,6 +33,7 @@ The path to follow might change at some points.
 	- [ ] Trampoline Hooking
 	- [ ] IAT Hooking
 	- [ ] VTable Hooking
+	- [x] Be A skid and use universal hooks
 - [ ] DirectX
 	- [x] Create Menu
 	- [ ] ESP Hacks
