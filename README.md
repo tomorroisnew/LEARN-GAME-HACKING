@@ -32,12 +32,12 @@ The path to follow might change at some points.
 	- [x] Function Hooking
 	- [ ] Trampoline Hooking
 	- [ ] IAT Hooking
-	- [ ] VTable Hooking
+	- [x] VTable Hooking
 	- [x] Be A skid and use universal hooks
 - [ ] DirectX
 	- [x] Create Menu
 	- [ ] ESP Hacks
-- [ ] Reverse Engeneering
+- [x] Reverse Engeneering
 	- [x] Assembly
 	- [x] OllyDBG | x64dbg | windbg | IDA Pro
 	- [x] Assembly Language for x86 Processors
