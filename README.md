@@ -1,4 +1,5 @@
 # LEARN-GAME-HACKING
+Inspired by gohorseprogrammer's Learning Game Hacking
 
 # Learning Game Hacking
 This project serves as documention for my game hacking learning curve.
