@@ -35,9 +35,9 @@ The path to follow might change at some points.
 	- [ ] IAT Hooking
 	- [x] VTable Hooking
 	- [x] Be A skid and use universal hooks
-- [ ] DirectX
+- [x] DirectX
 	- [x] Create Menu
-	- [ ] ESP Hacks
+	- [x] ESP Hacks
 - [x] Reverse Engeneering
 	- [x] Assembly
 	- [x] OllyDBG | x64dbg | windbg | IDA Pro
