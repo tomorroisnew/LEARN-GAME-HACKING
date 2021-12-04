@@ -23,7 +23,7 @@ The path to follow might change at some points.
 	- [x] Freeze Ammo
 	- [x] Bunnyhop
 	- [x] TriggerBot
-	- [ ] Aimbot
+	- [x] Aimbot
 	- [ ] AOB Scan
 - [x] ReClass
 - [x] Calling internal functions internally
