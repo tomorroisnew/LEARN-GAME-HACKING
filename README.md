@@ -31,7 +31,7 @@ The path to follow might change at some points.
 - [x] Creating an Injector
 - [ ] Hooks
 	- [x] Function Hooking
-	- [ ] Trampoline Hooking
+	- [x] Trampoline Hooking
 	- [ ] IAT Hooking
 	- [x] VTable Hooking
 	- [x] Be A skid and use universal hooks
