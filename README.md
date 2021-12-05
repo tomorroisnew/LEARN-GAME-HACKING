@@ -29,6 +29,7 @@ The path to follow might change at some points.
 - [x] Calling internal functions internally
 - [x] Calling internal functions Externally
 - [x] Creating an Injector
+- [ ] Unity Mono Injecting
 - [ ] Hooks
 	- [x] Function Hooking
 	- [x] Trampoline Hooking
