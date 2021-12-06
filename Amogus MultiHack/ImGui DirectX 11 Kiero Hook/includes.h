@@ -1,6 +1,7 @@
 #pragma once
 #include <Windows.h>
 #include <d3d11.h>
+#include <d3dx11.h>
 #include <dxgi.h>
 #include <vector>
 #include "kiero/kiero.h"
@@ -21,8 +22,11 @@ void AllKnowingHock();
 std::string PlayerColor(DWORD PlayerControl, DWORD ModuleAddress);
 std::string MainAllKnowingHack(DWORD ModuleAddress, DWORD PlayerControl);
 std::string Role(DWORD PlayerControl);
+void ESP();
 
 extern bool EnableAllKnowingHack;
 extern bool EnableSpeedHack;
 extern float PlayerModSpeed;
 extern std::string TextToPrint;
+extern bool esplines;
+extern bool espbox;

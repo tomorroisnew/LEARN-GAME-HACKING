@@ -3,6 +3,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <d3d11.h>
+#include "Functions.h"
+
+ImVec2 GetFeet(DWORD PlayerControl, DWORD cum);
+ImVec2 GetHead(DWORD PlayerControl, DWORD cum);
+
 void SpeedHack() {
 	DWORD BaseAddress = (DWORD)GetModuleHandle("GameAssembly.dll");
 	DWORD BasePointer = BaseAddress + 0x01C0C924;
@@ -154,4 +160,65 @@ std::string Role(DWORD PlayerControl) {
     }
 
     return "";
+}
+
+void ESP() {
+    DWORD cum = get_current_Camera();
+    ImDrawList* drawlist = ImGui::GetBackgroundDrawList();
+
+    //LocalPlayer
+    DWORD PlayerControl_c = *(DWORD*)((DWORD)GetModuleHandle("GameAssembly.dll") + 29436076);
+    DWORD PlayerControl_StaticFields = *(DWORD*)(PlayerControl_c + 0x5C);
+    DWORD LocalPlayer = *(DWORD*)(PlayerControl_StaticFields + 0x00);
+    if (!LocalPlayer) { return; }
+
+    //PlayerList
+    std::vector<DWORD> oPlayerList{ 0xDC, 0x28, 0x48, 0x98, 0xC, 0x5C, 0x8, 0x8, 0x10 };
+    DWORD baseAdress = GameAssembly + 0x01BEABF4;
+    DWORD playerList = GetOffset(baseAdress, oPlayerList);
+
+    for (int i = 0; i <= 128; i = i + 4) {
+        DWORD playerControl = *(DWORD*)(playerList + i);
+        if (playerControl == 0) { break; }
+        if (playerControl == LocalPlayer) {
+            continue;
+        }
+        
+        ImColor espcolor;
+        if (Role(playerControl) == "Impostor" || Role(playerControl) == "Shapeshifter") {
+            espcolor = ImColor(255,0,0,255);
+        }
+        else {
+            espcolor = ImColor(0, 0, 255, 255);
+        }
+
+        ImVec2 LocalFeet = GetFeet(LocalPlayer, cum);
+        ImVec2 PlayerHead = GetHead(playerControl, cum);
+        ImVec2 PlayerFeet = GetFeet(playerControl, cum);
+
+        if (esplines) {
+            drawlist->AddLine(LocalFeet, PlayerFeet, espcolor);
+        }
+        if (espbox) {
+            float height = PlayerHead.y - PlayerFeet.y;
+            float width = (height / 2) + 100.f;
+            drawlist->AddRect(ImVec2(PlayerHead.x - (width/2), PlayerHead.y), ImVec2(PlayerFeet.x + (width/2), PlayerFeet.y), espcolor);
+        }
+    }
+}
+
+ImVec2 GetHead(DWORD PlayerControl, DWORD cum) {
+    DWORD PlayerTransform = get_Transform((void*)PlayerControl);
+    Vec3 PlayerPos = get_Position((void*)PlayerTransform);
+    PlayerPos.y += .4f;
+    Vec3 w2s = WorldToScreenPoint((void*)cum, PlayerPos);
+    return ImVec2(w2s.x, ImGui::GetIO().DisplaySize.y - w2s.y);
+}
+
+ImVec2 GetFeet(DWORD PlayerControl, DWORD cum) {
+    DWORD PlayerTransform = get_Transform((void*)PlayerControl);
+    Vec3 PlayerPos = get_Position((void*)PlayerTransform);
+    PlayerPos.y -= .4f;
+    Vec3 w2s = WorldToScreenPoint((void*)cum, PlayerPos);
+    return ImVec2(w2s.x, ImGui::GetIO().DisplaySize.y - w2s.y);
 }

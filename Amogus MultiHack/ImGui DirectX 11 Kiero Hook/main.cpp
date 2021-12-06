@@ -1,4 +1,5 @@
 #include "includes.h"
+#include "Functions.h"
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 Present oPresent;
@@ -37,6 +38,8 @@ bool init = false;
 bool EnableAllKnowingHack;
 bool EnableSpeedHack;
 float PlayerModSpeed = 1;
+bool esplines;
+bool espbox;
 std::string TextToPrint;
 
 HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
@@ -61,7 +64,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 		else
 			return oPresent(pSwapChain, SyncInterval, Flags);
 	}
-
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
@@ -72,7 +74,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 		AllKnowingHock();
 		const char* Lmao = TextToPrint.c_str();
 		if (ImGui::CollapsingHeader("Player Data", true)) {
-			ImGui::TextColored(ImVec4(0, 0, 1, 1), Lmao);
+			ImGui::TextColored(ImVec4(255, 61, 200, 1), Lmao);
 		}
 	}
 	ImGui::Checkbox("Enable SpeedHack", &EnableSpeedHack);
@@ -83,8 +85,13 @@ HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	if (ImGui::Button("Finish Task")) {
 		ClearTask();
 	}
-	ImGui::End();
+	ImGui::Checkbox("ESP Lines", &esplines);
+	ImGui::Checkbox("ESP Boxes", &espbox);
+	if (esplines || espbox) {
+		ESP();
+	}
 
+	ImGui::End();
 	ImGui::Render();
 
 	pContext->OMSetRenderTargets(1, &mainRenderTargetView, NULL);
@@ -112,6 +119,7 @@ BOOL WINAPI DllMain(HMODULE hMod, DWORD dwReason, LPVOID lpReserved)
 	{
 	case DLL_PROCESS_ATTACH:
 		myhModule = hMod;
+		InitFunctions();
 		DisableThreadLibraryCalls(hMod);
 		CreateThread(nullptr, 0, MainThread, hMod, 0, nullptr);
 		break;
