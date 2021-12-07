@@ -12,12 +12,12 @@ The path to follow might change at some points.
 	- [x] Cheat Engine Tutorial
 - [x] C++
 - [x] Hardware Basics
-- [ ] Simple Trainers (External)
+- [x] Simple Trainers (External)
 	- [x] Freeze Health
 	- [x] Freeze Ammo
 	- [x] Bunnyhop
 	- [X] TriggerBot
-	- [ ] Aimbot
+	- [x] Aimbot
 - [ ] Internal
 	- [x] Freeze Health
 	- [x] Freeze Ammo
