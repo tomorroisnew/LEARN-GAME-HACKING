@@ -1,0 +1,6 @@
+﻿  buffer.c
+  hde32.c
+  hook.c
+  trampoline.c
+  Generating Code...
+  libMinHook.vcxproj -> D:\Programming\tboi Hack\tboi Hack\minhook\build\VC16\lib\Debug\libMinHook.x86.lib
