@@ -18,22 +18,22 @@ The path to follow might change at some points.
 	- [x] Bunnyhop
 	- [X] TriggerBot
 	- [x] Aimbot
-- [ ] Internal
+- [x] Internal
 	- [x] Freeze Health
 	- [x] Freeze Ammo
 	- [x] Bunnyhop
 	- [x] TriggerBot
 	- [x] Aimbot
-	- [ ] AOB Scan
+	- [x] AOB Scan
 - [x] ReClass
 - [x] Calling internal functions internally
 - [x] Calling internal functions Externally
 - [x] Creating an Injector
-- [ ] Unity Mono Injecting
-- [ ] Hooks
+- [x] Unity Mono Injecting
+- [x] Hooks
 	- [x] Function Hooking
 	- [x] Trampoline Hooking
-	- [ ] IAT Hooking
+	- [x] IAT Hooking
 	- [x] VTable Hooking
 	- [x] Be A skid and use universal hooks
 - [x] DirectX
